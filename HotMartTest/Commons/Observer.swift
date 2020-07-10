@@ -19,7 +19,10 @@ class Observer<T> {
     
     var value: T {
         didSet {
-            listener?(value)
+            DispatchQueue.main.async { [weak self] in
+                guard let _self = self else { return }
+                _self.listener?(_self.value)
+            }
         }
     }
     
@@ -36,6 +39,9 @@ class ObserverVoid: Observer<Void> {
     }
     
     func execute() {
-        self.listener?(())
+        DispatchQueue.main.async { [weak self] in
+            guard let _self = self else { return }
+            _self.listener?(())
+        }
     }
 }

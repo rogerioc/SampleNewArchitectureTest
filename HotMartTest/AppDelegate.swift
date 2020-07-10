@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.backgroundColor = UIColor.topaz
+        navigationController.navigationBar.tintColor = UIColor.topaz
         return navigationController
     }()
     

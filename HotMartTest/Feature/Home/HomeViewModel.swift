@@ -26,13 +26,17 @@ class HomeViewModel {
         self.interactor = interactor
     }
     
-    func start() {
+    func fetch()  {
         self.interactor.fetchLocationsList(success: { [unowned self] (dataLocations) in
             self.locations = dataLocations
             self.reloadTable.execute()
         },failure: { [unowned self]  (error) in
             self.error.value = "error"
         })
+    }
+    
+    func start() {
+        fetch()
     }
     
     public subscript(index: Int) -> Location? {

@@ -11,13 +11,14 @@ import Foundation
 class LocationCellViewModel {
     let location: Location
         
-    var name = Observer<String>("")
+    var locationData: Observer<Location>
     
     init(location: Location) {
       self.location = location
+      locationData = Observer(location)
     }
     
     func start() {
-        name.value = location.name
+        locationData.value = location
     }
 }
