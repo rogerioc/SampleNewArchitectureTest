@@ -14,8 +14,8 @@
 		33360ED524B7DFE600FF3415 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360ED424B7DFE600FF3415 /* Environment.swift */; };
 		33360ED724B7E13B00FF3415 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360ED624B7E13B00FF3415 /* EndPoint.swift */; };
 		33360ED924B7E1C500FF3415 /* EndpointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360ED824B7E1C500FF3415 /* EndpointTypeProtocol.swift */; };
-		33360EDF24B7E3BF00FF3415 /* ApiLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EDE24B7E3BF00FF3415 /* ApiLocations.swift */; };
-		33360EE124B7E98F00FF3415 /* LocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EE024B7E98F00FF3415 /* LocationsRepository.swift */; };
+		33360EDF24B7E3BF00FF3415 /* LocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EDE24B7E3BF00FF3415 /* LocationsRepository.swift */; };
+		33360EE124B7E98F00FF3415 /* LocationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EE024B7E98F00FF3415 /* LocationsInteractor.swift */; };
 		33360EE324B7EAB800FF3415 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EE224B7EAB800FF3415 /* HomeViewModel.swift */; };
 		33360EE524B7F04500FF3415 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EE424B7F04500FF3415 /* HomeViewController.swift */; };
 		33360EE724B7F0B900FF3415 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33360EE624B7F0B900FF3415 /* HomeCoordinator.swift */; };
@@ -32,6 +32,8 @@
 		33360F0524B8D64500FF3415 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33360F0424B8D64500FF3415 /* OpenSans-Semibold.ttf */; };
 		33360F0724B8D84100FF3415 /* helvetica-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33360F0624B8D84100FF3415 /* helvetica-bold.otf */; };
 		33360F0B24B8DA3600FF3415 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33360F0A24B8DA3600FF3415 /* OpenSans-Regular.ttf */; };
+		3344BE4D24B911F800ADA5A1 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3344BE4C24B911F800ADA5A1 /* HomeViewModelTests.swift */; };
+		3344BE4F24B9126300ADA5A1 /* LocationsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3344BE4E24B9126300ADA5A1 /* LocationsInteractorMock.swift */; };
 		33501DC524B7DA4E00842335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33501DC424B7DA4E00842335 /* AppDelegate.swift */; };
 		33501DC924B7DA4E00842335 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33501DC824B7DA4E00842335 /* ViewController.swift */; };
 		33501DD124B7DA5000842335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33501DCF24B7DA5000842335 /* LaunchScreen.storyboard */; };
@@ -63,8 +65,8 @@
 		33360ED424B7DFE600FF3415 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		33360ED624B7E13B00FF3415 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		33360ED824B7E1C500FF3415 /* EndpointTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTypeProtocol.swift; sourceTree = "<group>"; };
-		33360EDE24B7E3BF00FF3415 /* ApiLocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLocations.swift; sourceTree = "<group>"; };
-		33360EE024B7E98F00FF3415 /* LocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepository.swift; sourceTree = "<group>"; };
+		33360EDE24B7E3BF00FF3415 /* LocationsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsRepository.swift; sourceTree = "<group>"; };
+		33360EE024B7E98F00FF3415 /* LocationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsInteractor.swift; sourceTree = "<group>"; };
 		33360EE224B7EAB800FF3415 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		33360EE424B7F04500FF3415 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		33360EE624B7F0B900FF3415 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		33360F0424B8D64500FF3415 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		33360F0624B8D84100FF3415 /* helvetica-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "helvetica-bold.otf"; sourceTree = "<group>"; };
 		33360F0A24B8DA3600FF3415 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		3344BE4C24B911F800ADA5A1 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		3344BE4E24B9126300ADA5A1 /* LocationsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsInteractorMock.swift; sourceTree = "<group>"; };
 		33501DC124B7DA4E00842335 /* HotMartTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotMartTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33501DC424B7DA4E00842335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33501DC824B7DA4E00842335 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,8 +208,8 @@
 		33360EDD24B7E3AA00FF3415 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				33360EDE24B7E3BF00FF3415 /* ApiLocations.swift */,
-				33360EE024B7E98F00FF3415 /* LocationsRepository.swift */,
+				33360EDE24B7E3BF00FF3415 /* LocationsRepository.swift */,
+				33360EE024B7E98F00FF3415 /* LocationsInteractor.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -231,6 +235,14 @@
 				33360EFC24B8967600FF3415 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3344BE4B24B911CF00ADA5A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3344BE4C24B911F800ADA5A1 /* HomeViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		33501DB824B7DA4E00842335 = {
@@ -269,6 +281,7 @@
 		33501DDA24B7DA5000842335 /* HotMartTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				3344BE4B24B911CF00ADA5A1 /* ViewModel */,
 				33714EEC24B8F81300509C10 /* Mock */,
 				33714EE924B8F71700509C10 /* Services */,
 				33501DDB24B7DA5000842335 /* HotMartTestTests.swift */,
@@ -297,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				33714EED24B8F82900509C10 /* ApiLocationsMock.swift */,
+				3344BE4E24B9126300ADA5A1 /* LocationsInteractorMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -522,9 +536,9 @@
 				33360EF624B8961000FF3415 /* StringExtension.swift in Sources */,
 				33714EE824B8E36F00509C10 /* StarsView.swift in Sources */,
 				33501DC924B7DA4E00842335 /* ViewController.swift in Sources */,
-				33360EE124B7E98F00FF3415 /* LocationsRepository.swift in Sources */,
+				33360EE124B7E98F00FF3415 /* LocationsInteractor.swift in Sources */,
 				33360EE524B7F04500FF3415 /* HomeViewController.swift in Sources */,
-				33360EDF24B7E3BF00FF3415 /* ApiLocations.swift in Sources */,
+				33360EDF24B7E3BF00FF3415 /* LocationsRepository.swift in Sources */,
 				33360ED224B7DF4D00FF3415 /* LocationEndPoint.swift in Sources */,
 				33360ED524B7DFE600FF3415 /* Environment.swift in Sources */,
 				33360EE324B7EAB800FF3415 /* HomeViewModel.swift in Sources */,
@@ -543,7 +557,9 @@
 			files = (
 				33501DDC24B7DA5000842335 /* HotMartTestTests.swift in Sources */,
 				33714EEE24B8F82900509C10 /* ApiLocationsMock.swift in Sources */,
+				3344BE4F24B9126300ADA5A1 /* LocationsInteractorMock.swift in Sources */,
 				33714EEB24B8F73500509C10 /* ApiLocationsTests.swift in Sources */,
+				3344BE4D24B911F800ADA5A1 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,13 +635,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -673,12 +690,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -691,13 +709,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CD3Y3H29Q;
 				INFOPLIST_FILE = HotMartTest/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rogeriocs.HotMartTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -710,13 +729,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CD3Y3H29Q;
 				INFOPLIST_FILE = HotMartTest/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rogeriocs.HotMartTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -730,7 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CD3Y3H29Q;
 				INFOPLIST_FILE = HotMartTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -738,7 +758,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rogeriocs.HotMartTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotMartTest.app/HotMartTest";
 			};
@@ -753,7 +773,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CD3Y3H29Q;
 				INFOPLIST_FILE = HotMartTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -761,7 +781,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rogeriocs.HotMartTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotMartTest.app/HotMartTest";
 			};

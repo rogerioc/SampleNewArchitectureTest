@@ -31,7 +31,7 @@ class HomeViewModel {
             self.locations = dataLocations
             self.reloadTable.execute()
         },failure: { [unowned self]  (error) in
-            self.error.value = "error"
+            self.error.value = "Error"
         })
     }
     

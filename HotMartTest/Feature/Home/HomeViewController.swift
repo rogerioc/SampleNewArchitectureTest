@@ -33,10 +33,10 @@ class HomeViewController: UICollectionViewController {
     
     override func viewDidLoad() {
        super.viewDidLoad()
-        collectionView.register(LocationCell.self, forCellWithReuseIdentifier: LocationCell.defaultReuseIdentifier)
+        collectionView?.register(LocationCell.self, forCellWithReuseIdentifier: LocationCell.defaultReuseIdentifier)
         self.refreshControl = UIRefreshControl()
-        collectionView.backgroundColor = .white
-        collectionView.refreshControl = refreshControl
+        collectionView?.backgroundColor = .white
+        collectionView?.refreshControl = refreshControl
        refreshControl!.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
        title = "home.title".localizable
         
@@ -45,7 +45,7 @@ class HomeViewController: UICollectionViewController {
     
     func bind() {
         viewModel?.reloadTable.bind({ [unowned self] _ in
-            self.collectionView.reloadData()
+            self.collectionView?.reloadData()
             self.refreshControl?.endRefreshing()
         })
         
