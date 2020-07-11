@@ -85,6 +85,10 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return viewModel?.quantity ?? 0
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        
+        viewModel?.selected(index: indexPath.row)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  LocationCell.defaultReuseIdentifier, for: indexPath) as! LocationCell
         if let location = viewModel?[indexPath.row] {

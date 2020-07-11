@@ -11,11 +11,13 @@ import Alamofire
 
 enum LocationEndPoint: EndpointTypeProtocol {
     case list
+    case detail(Int)
     
     var method: HTTPMethod {
         switch self {
-        case .list:
+        case .list, .detail:
             return .get
+        
         }
     }
     
@@ -23,6 +25,8 @@ enum LocationEndPoint: EndpointTypeProtocol {
         switch self {
             case .list:
                 return "/locations"
+            case .detail(let id):
+            return "/locations/\(id)"
         }
     }
     

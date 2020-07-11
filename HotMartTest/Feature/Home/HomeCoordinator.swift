@@ -12,15 +12,18 @@ import UIKit
 class HomeCoordinator: Coordinator {
     
     var navigatorController: UINavigationController
-    var homeView: HomeViewController?
+    private var homeView: HomeViewController?
+    private var navigation: MainCoordinator?
     
-    init(navigator: UINavigationController) {
+    init(navigator: UINavigationController,navigation: MainCoordinator? = nil) {
         self.navigatorController = navigator
+        self.navigation = navigation
     }
     
     func start() {
         homeView = HomeViewController()
-        homeView?.viewModel = HomeFactory.getHomeViewModel()
+        homeView?.viewModel = HomeFactory.makeHomeViewModel()
+        homeView?.viewModel?.navigation = navigation
         guard let view = homeView else {
             return
         }

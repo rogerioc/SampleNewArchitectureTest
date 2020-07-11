@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct CustomError: Error {
+public struct CustomError: Error {
     
 }

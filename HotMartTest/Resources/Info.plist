@@ -7,6 +7,7 @@
 		<string>helvetica-bold.otf</string>
 		<string>OpenSans-Semibold.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
+		<string>OpenSans-Light.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

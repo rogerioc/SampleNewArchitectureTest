@@ -9,19 +9,16 @@
 import Foundation
 class HomeFactory {
     
-    static func getHomeViewModel() -> HomeViewModel {
-        HomeViewModel(interactor: HomeFactory.getLocationsInteractor())
+    static func makeHomeViewModel() -> HomeViewModel {
+        HomeViewModel(interactor: HomeFactory.makeLocationsInteractor())
     }
     
-    static func getLocationsInteractor()-> LocationsInteractorProtocol {
-        LocationsInteractor(repository: HomeFactory.getLocationsRepository())
+    static func makeLocationsInteractor()-> LocationsInteractorProtocol {
+        LocationsInteractor(repository: HomeFactory.makeLocationsRepository())
     }
     
-    static func getLocationsRepository() -> LocationsRepository {
-        ApiLocations(environment: HomeFactory.getEnvironment())
+    static func makeLocationsRepository() -> LocationsRepository {
+        ApiLocations(environment: DefaultFactor.makeEnvironment())
     }
-    
-    static func getEnvironment() -> Environment {
-        EnvironmentString()
-    }
+        
 }

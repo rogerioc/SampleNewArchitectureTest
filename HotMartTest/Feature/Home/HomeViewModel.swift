@@ -10,6 +10,7 @@ import Foundation
 
 class HomeViewModel {
     let interactor: LocationsInteractorProtocol
+    var navigation: MainCoordinator?
     
     var reloadTable = ObserverVoid()
     var error = Observer<String>("")
@@ -30,8 +31,8 @@ class HomeViewModel {
         self.interactor.fetchLocationsList(success: { [unowned self] (dataLocations) in
             self.locations = dataLocations
             self.reloadTable.execute()
-        },failure: { [unowned self]  (error) in
-            self.error.value = "Error"
+            },failure: { [unowned self]  (error) in
+                self.error.value = "Error"
         })
     }
     
@@ -43,8 +44,18 @@ class HomeViewModel {
         guard let list = self.locations?.listLocations,
             index >= 0 ,
             index < list.count else {
-            return nil
+                return nil
         }
         return list[index]
+    }
+    
+    public func selected(index: Int) {
+        guard let list = self.locations?.listLocations,
+            index >= 0 ,
+            index < list.count else {
+                return
+        }
+        let id = list[index].id
+        navigation?.goTo(route: .selectedItem(id))
     }
 }

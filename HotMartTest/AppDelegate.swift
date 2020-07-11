@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var homeCoordinator: HomeCoordinator?
+    var mainCoordinator: MainCoordinator?
     
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow()
         window?.rootViewController = navigationController
-        homeCoordinator = HomeCoordinator(navigator: self.navigationController)
+        mainCoordinator = MainCoordinator(navigatorController: self.navigationController)
         window?.makeKeyAndVisible()
-        homeCoordinator?.start()
+        mainCoordinator?.start()
         return true
     }
 

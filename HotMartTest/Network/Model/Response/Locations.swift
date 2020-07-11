@@ -12,11 +12,11 @@ import Foundation
 //           "type": "Coworking",
 //           "id": 1
 
-struct DataLocations: Codable {
+public struct DataLocations: Codable {
     let listLocations: [Location]
 }
 
-struct Location: Codable {
+public struct Location: Codable {
     let name: String
     let review: Double
     let type: String

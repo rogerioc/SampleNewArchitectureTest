@@ -12,7 +12,7 @@ import XCTest
 @testable import HotMartTest
 
 class ApiLocationsMock: Mock, LocationsRepository {
-    
+            
     let callHandler: CallHandler
 
     init(testCase: XCTestCase) {
@@ -26,6 +26,11 @@ class ApiLocationsMock: Mock, LocationsRepository {
     
     func fetchLocations(success: @escaping (DataLocations) -> (), failure: @escaping (CustomError) -> ()) {
         callHandler.accept(nil, ofFunction: #function, atFile: #file, inLine: #line, withArgs: success, failure)
-    }    
+    }
+    
+    func getDetail(id: Int, success: @escaping (Details) -> (), failure: @escaping (CustomError) -> ()) {
+        callHandler.accept(nil, ofFunction: #function, atFile: #file, inLine: #line, withArgs: success, failure)
+    }
+    
     
 }

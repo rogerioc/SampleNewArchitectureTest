@@ -45,15 +45,33 @@ final class LocationCell: UICollectionViewCell {
         label.font = .textStyle2
         return label
     }()
-    
+            
     lazy var starsView: StarsView = {
         let starsView = StarsView(frame: .zero)
         starsView.translatesAutoresizingMaskIntoConstraints = false
+        starsView.type = .small
        return starsView
+    }()
+    
+    lazy var review: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .blackTwo
+        label.font = .textStyle
+        return label
+    }()
+    
+    lazy var stackReview: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [starsView,review])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .fill
+        stackView.axis = .horizontal
+        return stackView
     }()
       
     lazy var stackData: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [name,type, starsView])
+        let stackView = UIStackView(arrangedSubviews: [name,type, stackReview])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         stackView.alignment = .fill
@@ -78,6 +96,7 @@ final class LocationCell: UICollectionViewCell {
             stackData.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -metrics.bottom),
             stackData.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -metrics.left),
             stackData.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: metrics.right),
+            starsView.topAnchor.constraint(greaterThanOrEqualTo: stackData.topAnchor, constant: 4.0),
             starsView.leadingAnchor.constraint(equalTo: stackData.leadingAnchor),
             name.centerXAnchor.constraint(equalTo: stackData.centerXAnchor),
             type.centerXAnchor.constraint(equalTo: stackData.centerXAnchor),
@@ -98,6 +117,7 @@ final class LocationCell: UICollectionViewCell {
         viewModel?.locationData.bind({ [unowned self] (location) in
             self.name.text = location.name
             self.type.text = location.type
+            self.review.text = String(format: "%.1f", location.review)
             self.starsView.count = Int(location.review)
         })
         
